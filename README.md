@@ -11,23 +11,23 @@ build, including files already produced by LineageOS/AOSP. That caused
 duplicate install rules for platform files such as generic Bluetooth,
 keystore, GLES, ClearKey DRM, and Bluetooth config outputs.
 
-The current vendor list follows the conservative style used by similar Samsung
-MSM8937 devices: add only blobs that are known to be needed, then grow the
-list from logs.
+The current vendor list is intentionally minimal. Marshmallow display, EGL,
+camera, and sensor blobs are kept in the repository for later subsystem work,
+but they are not installed into the product image during first-boot bring-up.
+The base system should reach adb using LineageOS/AOSP generic HALs and software
+rendering before old proprietary HALs are added back one subsystem at a time.
 
 ## Included Blobs
 
-```text
-proprietary/bin/mm-qcamera-daemon
-proprietary/lib/hw/sensors.msm8937.so
-proprietary/vendor/lib/libmmcamera2_sensor_modules.so
-```
-
-These are installed through:
+No proprietary Marshmallow blobs are installed by the current product makefile.
+Only the framework-built `libtinyxml` package is requested by:
 
 ```text
 elitelte_kor-vendor.mk
 ```
+
+This keeps stale Android 6.0 HALs from being loaded accidentally while init,
+USB, adbd, zygote, and software rendering are being stabilized.
 
 ## Source Layout
 
