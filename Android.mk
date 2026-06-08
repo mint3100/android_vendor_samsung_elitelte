@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),elitelte_kor)
+ifeq ($(TARGET_DEVICE),elitelte)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := copybit.msm8937

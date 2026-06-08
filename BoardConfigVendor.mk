@@ -1,1 +1,1 @@
-# Board vendor config for elitelte_kor
+# Board vendor config for elitelte

@@ -1,0 +1,5 @@
+# Additional syscalls required by legacy Qualcomm/Samsung OMX blobs.
+# The platform mediacodec policy is still used as the base policy; this file is
+# appended by frameworks/av/services/minijail through the vendor policy path.
+eventfd: 1
+eventfd2: 1
