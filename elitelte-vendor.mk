@@ -115,7 +115,6 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/samsung/elitelte/configs/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(ELITELTE_VENDOR_PATH)/lib/hw/audio.primary.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.msm8937.so \
-    $(ELITELTE_VENDOR_PATH)/lib/hw/bluetooth.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/bluetooth.default.so \
     $(ELITELTE_VENDOR_PATH)/lib/hw/sensors.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/lib_SamsungRec_V04013.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_SamsungRec_V04013.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcess.so \
@@ -141,6 +140,7 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungpowersound.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungpowersound.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungearcare.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungearcare.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungvad.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungvad.so \
+    $(ELITELTE_VENDOR_PATH)/lib/libsecaudioinfo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsecaudioinfo.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsecril-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsecril-client.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungVoipResampler.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungVoipResampler.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdb-fts.so \
