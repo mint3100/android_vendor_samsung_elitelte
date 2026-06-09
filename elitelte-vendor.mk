@@ -43,6 +43,7 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/etc/bluetooth/auto_pair_devlist.conf:system/etc/bluetooth/auto_pair_devlist.conf \
     $(ELITELTE_VENDOR_PATH)/etc/control_netmgrd.sh:system/etc/control_netmgrd.sh \
     $(ELITELTE_VENDOR_PATH)/etc/bluetooth/av_performance.conf:system/etc/bluetooth/av_performance.conf \
+    $(ELITELTE_VENDOR_PATH)/etc/bluetooth/ble_stack.conf:system/etc/bluetooth/ble_stack.conf \
     $(ELITELTE_VENDOR_PATH)/etc/bluetooth/iop_bt.db:system/etc/bluetooth/iop_bt.db \
     $(ELITELTE_VENDOR_PATH)/etc/bluetooth/iop_device_list.conf:system/etc/bluetooth/iop_device_list.conf \
     $(ELITELTE_VENDOR_PATH)/etc/firmware/wlan/prima/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
@@ -56,6 +57,7 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/etc/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
     $(ELITELTE_VENDOR_PATH)/etc/audio_platform_info_extcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_extcodec.xml \
     $(ELITELTE_VENDOR_PATH)/etc/audio_policy.conf:system/etc/audio_policy.conf \
+    $(ELITELTE_VENDOR_PATH)/etc/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
     $(ELITELTE_VENDOR_PATH)/etc/data/netmgr_config.xml:system/etc/data/netmgr_config.xml \
     $(ELITELTE_VENDOR_PATH)/etc/data/qmi_config.xml:system/etc/data/qmi_config.xml \
     $(ELITELTE_VENDOR_PATH)/etc/data/dsi_config.xml:system/etc/data/dsi_config.xml \
@@ -103,6 +105,10 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_wcd9335.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9335.xml \
     $(ELITELTE_VENDOR_PATH)/etc/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
     $(ELITELTE_VENDOR_PATH)/etc/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/sensors/hals.conf:system/etc/sensors/hals.conf \
+    $(ELITELTE_VENDOR_PATH)/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
+    $(ELITELTE_VENDOR_PATH)/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
+    $(ELITELTE_VENDOR_PATH)/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/fstman.ini:system/etc/wifi/fstman.ini \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
@@ -111,6 +117,7 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/lib/hw/audio.primary.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/hw/bluetooth.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/bluetooth.default.so \
     $(ELITELTE_VENDOR_PATH)/lib/hw/sensors.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.msm8937.so \
+    $(ELITELTE_VENDOR_PATH)/lib/lib_SamsungRec_V04013.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_SamsungRec_V04013.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcess.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcessConvertor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcessConvertor.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPreProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPreProcess.so \
