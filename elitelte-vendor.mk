@@ -120,7 +120,6 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/lib/libicu55.so:$(TARGET_COPY_OUT_VENDOR)/lib/libicu55.so \
     $(ELITELTE_VENDOR_PATH)/lib/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor.so \
     $(ELITELTE_VENDOR_PATH)/lib/lib_soundaliveresampler.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_soundaliveresampler.so \
-    $(ELITELTE_VENDOR_PATH)/lib/libtinycompress.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinycompress.so \
     $(ELITELTE_VENDOR_PATH)/lib/libedmnativehelper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libedmnativehelper.so \
     $(ELITELTE_VENDOR_PATH)/lib/libpower.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpower.so \
     $(ELITELTE_VENDOR_PATH)/lib/librmnetctl.so:$(TARGET_COPY_OUT_VENDOR)/lib/librmnetctl.so \
