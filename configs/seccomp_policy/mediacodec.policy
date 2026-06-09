@@ -3,3 +3,4 @@
 # appended by frameworks/av/services/minijail through the vendor policy path.
 eventfd: 1
 eventfd2: 1
+pselect6: 1

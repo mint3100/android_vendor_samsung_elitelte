@@ -41,7 +41,6 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/bin/time_daemon:system/bin/time_daemon \
     $(ELITELTE_VENDOR_PATH)/bin/wcnss_service:system/bin/wcnss_service \
     $(ELITELTE_VENDOR_PATH)/etc/bluetooth/auto_pair_devlist.conf:system/etc/bluetooth/auto_pair_devlist.conf \
-    $(ELITELTE_VENDOR_PATH)/etc/bluetooth/bt_stack.conf:root/etc/bluetooth/bt_stack.conf \
     $(ELITELTE_VENDOR_PATH)/etc/control_netmgrd.sh:system/etc/control_netmgrd.sh \
     $(ELITELTE_VENDOR_PATH)/etc/bluetooth/av_performance.conf:system/etc/bluetooth/av_performance.conf \
     $(ELITELTE_VENDOR_PATH)/etc/bluetooth/iop_bt.db:system/etc/bluetooth/iop_bt.db \
@@ -53,33 +52,57 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
     $(ELITELTE_VENDOR_PATH)/etc/firmware/wlan/prima/grippower.info:system/etc/firmware/wlan/prima/grippower.info \
     $(ELITELTE_VENDOR_PATH)/etc/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(ELITELTE_VENDOR_PATH)/etc/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/audio_platform_info_extcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_extcodec.xml \
     $(ELITELTE_VENDOR_PATH)/etc/audio_policy.conf:system/etc/audio_policy.conf \
     $(ELITELTE_VENDOR_PATH)/etc/data/netmgr_config.xml:system/etc/data/netmgr_config.xml \
     $(ELITELTE_VENDOR_PATH)/etc/data/qmi_config.xml:system/etc/data/qmi_config.xml \
     $(ELITELTE_VENDOR_PATH)/etc/data/dsi_config.xml:system/etc/data/dsi_config.xml \
     $(ELITELTE_VENDOR_PATH)/etc/Bluetooth_cal.acdb:system/etc/Bluetooth_cal.acdb \
+    $(ELITELTE_VENDOR_PATH)/etc/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/Bluetooth_cal.acdb \
     $(ELITELTE_VENDOR_PATH)/etc/General_cal.acdb:system/etc/General_cal.acdb \
+    $(ELITELTE_VENDOR_PATH)/etc/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/General_cal.acdb \
     $(ELITELTE_VENDOR_PATH)/etc/Global_cal.acdb:system/etc/Global_cal.acdb \
+    $(ELITELTE_VENDOR_PATH)/etc/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/Global_cal.acdb \
     $(ELITELTE_VENDOR_PATH)/etc/Handset_cal.acdb:system/etc/Handset_cal.acdb \
+    $(ELITELTE_VENDOR_PATH)/etc/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/Handset_cal.acdb \
     $(ELITELTE_VENDOR_PATH)/etc/Hdmi_cal.acdb:system/etc/Hdmi_cal.acdb \
+    $(ELITELTE_VENDOR_PATH)/etc/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/Hdmi_cal.acdb \
     $(ELITELTE_VENDOR_PATH)/etc/Headset_cal.acdb:system/etc/Headset_cal.acdb \
+    $(ELITELTE_VENDOR_PATH)/etc/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/Headset_cal.acdb \
     $(ELITELTE_VENDOR_PATH)/etc/Speaker_cal.acdb:system/etc/Speaker_cal.acdb \
+    $(ELITELTE_VENDOR_PATH)/etc/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/Speaker_cal.acdb \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_mtp.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_sku1.xml:system/etc/mixer_paths_qrd_sku1.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_sku1.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_sku2.xml:system/etc/mixer_paths_qrd_sku2.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_sku2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_sku2.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_skuh.xml:system/etc/mixer_paths_qrd_skuh.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_skuh.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skuh.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_skuhf.xml:system/etc/mixer_paths_qrd_skuhf.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_skuhf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skuhf.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_skui.xml:system/etc/mixer_paths_qrd_skui.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_skui.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skui.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_skum.xml:system/etc/mixer_paths_qrd_skum.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_skum.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skum.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_skun.xml:system/etc/mixer_paths_qrd_skun.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_qrd_skun.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skun.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_skuk.xml:system/etc/mixer_paths_skuk.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_skuk.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_skuk.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_wcd9306.xml:system/etc/mixer_paths_wcd9306.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_wcd9306.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9306.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_wcd9326.xml:system/etc/mixer_paths_wcd9326.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_wcd9326.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9326.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_wcd9330.xml:system/etc/mixer_paths_wcd9330.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_wcd9330.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9330.xml \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_wcd9335.xml:system/etc/mixer_paths_wcd9335.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_wcd9335.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9335.xml \
     $(ELITELTE_VENDOR_PATH)/etc/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/fstman.ini:system/etc/wifi/fstman.ini \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
@@ -87,6 +110,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/elitelte/configs/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(ELITELTE_VENDOR_PATH)/lib/hw/audio.primary.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/hw/bluetooth.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/bluetooth.default.so \
+    $(ELITELTE_VENDOR_PATH)/lib/hw/sensors.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcess.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcessConvertor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcessConvertor.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPreProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPreProcess.so \
