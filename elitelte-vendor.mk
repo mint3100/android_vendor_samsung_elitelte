@@ -164,9 +164,6 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/librs_adreno_sha1.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno_sha1.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libsc-a3xx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsc-a3xx.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libscalar.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscalar.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libsdm-color.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-color.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libsdm-disp-apis.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-disp-apis.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libsdmextension.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdmextension.so \
     $(ELITELTE_VENDOR_PATH)/etc/firmware/a300_pfp.fw:system/etc/firmware/a300_pfp.fw \
     $(ELITELTE_VENDOR_PATH)/etc/firmware/a300_pm4.fw:system/etc/firmware/a300_pm4.fw \
     $(ELITELTE_VENDOR_PATH)/etc/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
