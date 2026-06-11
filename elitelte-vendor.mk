@@ -117,6 +117,7 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/lib/hw/audio.primary.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/hw/sensors.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/lib_SamsungRec_V04013.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_SamsungRec_V04013.so \
+    $(ELITELTE_VENDOR_PATH)/lib/lib_DNSe_NRSS_ver226.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_DNSe_NRSS_ver226.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcess.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcessConvertor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcessConvertor.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPreProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPreProcess.so \
