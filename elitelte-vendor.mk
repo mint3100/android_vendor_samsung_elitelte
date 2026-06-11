@@ -37,7 +37,10 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/bin/at_distributor:system/bin/at_distributor \
     $(ELITELTE_VENDOR_PATH)/bin/diag_uart_log:system/bin/diag_uart_log \
     $(ELITELTE_VENDOR_PATH)/bin/diag_mdlog:system/bin/diag_mdlog \
+    $(ELITELTE_VENDOR_PATH)/bin/irsc_util:$(TARGET_COPY_OUT_VENDOR)/bin/irsc_util \
+    $(ELITELTE_VENDOR_PATH)/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
     $(ELITELTE_VENDOR_PATH)/bin/rmt_storage:system/bin/rmt_storage \
+    $(ELITELTE_VENDOR_PATH)/bin/sensors.qcom:system/bin/sensors.qcom \
     $(ELITELTE_VENDOR_PATH)/bin/time_daemon:system/bin/time_daemon \
     $(ELITELTE_VENDOR_PATH)/bin/wcnss_service:system/bin/wcnss_service \
     $(ELITELTE_VENDOR_PATH)/etc/bluetooth/auto_pair_devlist.conf:system/etc/bluetooth/auto_pair_devlist.conf \
@@ -58,6 +61,7 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/etc/audio_platform_info_extcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_extcodec.xml \
     $(ELITELTE_VENDOR_PATH)/etc/audio_policy.conf:system/etc/audio_policy.conf \
     $(ELITELTE_VENDOR_PATH)/etc/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
+    $(ELITELTE_VENDOR_PATH)/etc/sec_config:system/etc/sec_config \
     $(ELITELTE_VENDOR_PATH)/etc/data/netmgr_config.xml:system/etc/data/netmgr_config.xml \
     $(ELITELTE_VENDOR_PATH)/etc/data/qmi_config.xml:system/etc/data/qmi_config.xml \
     $(ELITELTE_VENDOR_PATH)/etc/data/dsi_config.xml:system/etc/data/dsi_config.xml \
@@ -115,8 +119,10 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/samsung/elitelte/configs/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(ELITELTE_VENDOR_PATH)/lib/hw/audio.primary.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.msm8937.so \
+    $(ELITELTE_VENDOR_PATH)/lib/hw/camera.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/hw/sensors.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/lib_SamsungRec_V04013.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_SamsungRec_V04013.so \
+    $(ELITELTE_VENDOR_PATH)/lib/lib_Samsung_AudioZoom_v102.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_Samsung_AudioZoom_v102.so \
     $(ELITELTE_VENDOR_PATH)/lib/lib_DNSe_NRSS_ver226.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_DNSe_NRSS_ver226.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcess.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcessConvertor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcessConvertor.so \
@@ -136,6 +142,7 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungRecord.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungRecord.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungRecord_ns.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungRecord_ns.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungRecord_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungRecord_zoom.so \
+    $(ELITELTE_VENDOR_PATH)/lib/lib_SoundBooster_ver700.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_SoundBooster_ver700.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungeffect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungeffect.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungSoundbooster_plus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungSoundbooster_plus.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungpowersound.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungpowersound.so \
@@ -199,6 +206,51 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/etc/firmware/a300_pm4.fw:system/etc/firmware/a300_pm4.fw \
     $(ELITELTE_VENDOR_PATH)/etc/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
     $(ELITELTE_VENDOR_PATH)/etc/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw
+
+ELITELTE_CAMERA_CONFIGS := \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/etc/camera/*.xml)
+
+ELITELTE_CAMERA_FIRMWARE := \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/etc/firmware/cpp_firmware*.fw)
+
+ELITELTE_CAMERA_SYSTEM_LIBS := \
+    $(ELITELTE_VENDOR_PATH)/lib/libcameraservice_cameramodule.so \
+    $(ELITELTE_VENDOR_PATH)/lib/libmm-qcamera.so \
+    $(ELITELTE_VENDOR_PATH)/lib/libmmcamera2_is.so \
+    $(ELITELTE_VENDOR_PATH)/lib/libmmcamera2_q3a_core.so \
+    $(ELITELTE_VENDOR_PATH)/lib/libmmcamera2_stats_algorithm.so \
+    $(ELITELTE_VENDOR_PATH)/lib/libmmcamera_interface.so \
+    $(ELITELTE_VENDOR_PATH)/lib/libmmcamera_pdaf.so \
+    $(ELITELTE_VENDOR_PATH)/lib/libmmcamera_pdafcamif.so \
+    $(ELITELTE_VENDOR_PATH)/lib/libmmjpeg_interface.so
+
+ELITELTE_CAMERA_VENDOR_LIBS := \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libactuator_dw9807.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libadsp_default_listener.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libadsprpc.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libchromatix_s5k3p8sx*.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libchromatix_sr259*.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libchromatix_sr846*.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libcppf.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libfastcv*.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libjpegd*.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libjpege*.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libmmcamera*.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libmmjpeg.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libqomx_jpeg*.so)
+
+ELITELTE_SENSOR_VENDOR_LIBS := \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libsensor1.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libsensor_reg.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/sensor_calibrate.so) \
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/sensors.ssc.so)
+
+PRODUCT_COPY_FILES += \
+    $(foreach f,$(ELITELTE_CAMERA_CONFIGS),$(f):system/etc/camera/$(notdir $(f))) \
+    $(foreach f,$(ELITELTE_CAMERA_FIRMWARE),$(f):system/etc/firmware/$(notdir $(f))) \
+    $(foreach f,$(ELITELTE_CAMERA_SYSTEM_LIBS),$(f):$(TARGET_COPY_OUT_VENDOR)/lib/$(notdir $(f))) \
+    $(foreach f,$(ELITELTE_CAMERA_VENDOR_LIBS),$(f):$(TARGET_COPY_OUT_VENDOR)/lib/$(notdir $(f))) \
+    $(foreach f,$(ELITELTE_SENSOR_VENDOR_LIBS),$(f):$(TARGET_COPY_OUT_VENDOR)/lib/$(notdir $(f)))
 
 # Oreo CAF MSM8937 media profiles/codecs. These expose the same 1080p30 H.264
 # hardware encoder class as stock, while matching the LineageOS 15.1 media stack.
