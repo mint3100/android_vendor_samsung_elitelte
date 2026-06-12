@@ -109,10 +109,6 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/etc/mixer_paths_wcd9335.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9335.xml \
     $(ELITELTE_VENDOR_PATH)/etc/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
     $(ELITELTE_VENDOR_PATH)/etc/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
-    $(ELITELTE_VENDOR_PATH)/etc/sensors/hals.conf:system/etc/sensors/hals.conf \
-    $(ELITELTE_VENDOR_PATH)/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
-    $(ELITELTE_VENDOR_PATH)/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
-    $(ELITELTE_VENDOR_PATH)/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/fstman.ini:system/etc/wifi/fstman.ini \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
@@ -240,8 +236,7 @@ ELITELTE_CAMERA_VENDOR_LIBS := \
 ELITELTE_SENSOR_VENDOR_LIBS := \
     $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libsensor1.so) \
     $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libsensor_reg.so) \
-    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/sensor_calibrate.so) \
-    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/sensors.ssc.so)
+    $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/sensor_calibrate.so)
 
 PRODUCT_COPY_FILES += \
     $(foreach f,$(ELITELTE_CAMERA_CONFIGS),$(f):system/etc/camera/$(notdir $(f))) \

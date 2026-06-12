@@ -1324,6 +1324,55 @@
         <ctl name="DEC2 Volume" value="84" />
         <ctl name="ADC1 Volume" value="2" />
     </path>
+
+    <!-- CAF audio HAL aliases for Samsung stock voice paths. -->
+    <path name="voice-handset">
+        <path name="voice-call-handset" />
+    </path>
+
+    <path name="voice-hac-handset">
+        <path name="voice-call-handset-hac" />
+    </path>
+
+    <path name="voice-speaker">
+        <path name="voice-call-speaker" />
+    </path>
+
+    <path name="voice-speaker-hfp">
+        <path name="voice-call-speaker" />
+    </path>
+
+    <path name="voice-speaker-protected">
+        <path name="voice-call-speaker" />
+    </path>
+
+    <path name="voice-headphones">
+        <path name="voice-call-headset" />
+    </path>
+
+    <path name="voice-line">
+        <path name="voice-call-headset" />
+    </path>
+
+    <path name="voice-tty-full-headphones">
+        <path name="voice-call-headset" />
+    </path>
+
+    <path name="voice-tty-vco-headphones">
+        <path name="voice-call-headset" />
+    </path>
+
+    <path name="voice-tty-hco-handset">
+        <path name="voice-call-handset" />
+    </path>
+
+    <path name="handset-mic">
+        <path name="voice-call-main-mic" />
+    </path>
+
+    <path name="speaker-mic">
+        <path name="voice-call-NS-mic-speaker" />
+    </path>
     <!-- end of Voice call Scenario  -->
 
     <!-- ================================================================ -->
