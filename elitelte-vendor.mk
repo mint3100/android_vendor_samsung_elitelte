@@ -118,7 +118,6 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/samsung/elitelte/configs/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    $(ELITELTE_VENDOR_PATH)/lib/hw/audio.primary.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/hw/camera.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/hw/sensors.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/lib_SamsungRec_V04013.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_SamsungRec_V04013.so \
@@ -127,7 +126,6 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcess.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcessConvertor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcessConvertor.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPreProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPreProcess.so \
-    $(ELITELTE_VENDOR_PATH)/lib/libaudioroute.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioroute.so \
     $(ELITELTE_VENDOR_PATH)/lib/libbt-iopdb.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-iopdb.so \
     $(ELITELTE_VENDOR_PATH)/lib/libbt-iopdb_mod.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-iopdb_mod.so \
     $(ELITELTE_VENDOR_PATH)/lib/libicu55.so:$(TARGET_COPY_OUT_VENDOR)/lib/libicu55.so \
