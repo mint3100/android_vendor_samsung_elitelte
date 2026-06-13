@@ -12,12 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Curated vendor set for elitelte.
-#
-# Keep the Marshmallow proprietary HALs out of first-boot diagnostics. Android
-# 8.1 provides enough generic services for early init/adbd, but SurfaceFlinger
-# requires a real OpenGL ES 2.0 implementation. Keep the stock Adreno blobs,
-# while display HAL modules are built from Qualcomm source in the device tree.
+# Stock vendor set for elitelte.
 
 PRODUCT_PACKAGES += \
     libtinyxml
@@ -59,6 +54,8 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/etc/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(ELITELTE_VENDOR_PATH)/etc/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
     $(ELITELTE_VENDOR_PATH)/etc/audio_platform_info_extcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_extcodec.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
+    $(ELITELTE_VENDOR_PATH)/etc/audio_effects_sec.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_sec.conf \
     $(ELITELTE_VENDOR_PATH)/etc/audio_policy.conf:system/etc/audio_policy.conf \
     $(ELITELTE_VENDOR_PATH)/etc/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
     $(ELITELTE_VENDOR_PATH)/etc/sec_config:system/etc/sec_config \
@@ -126,6 +123,7 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/lib/libbt-iopdb.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-iopdb.so \
     $(ELITELTE_VENDOR_PATH)/lib/libbt-iopdb_mod.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-iopdb_mod.so \
     $(ELITELTE_VENDOR_PATH)/lib/libicu55.so:$(TARGET_COPY_OUT_VENDOR)/lib/libicu55.so \
+    $(ELITELTE_VENDOR_PATH)/lib/libaudioroute.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioroute.so \
     $(ELITELTE_VENDOR_PATH)/lib/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor.so \
     $(ELITELTE_VENDOR_PATH)/lib/lib_soundaliveresampler.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_soundaliveresampler.so \
     $(ELITELTE_VENDOR_PATH)/lib/libedmnativehelper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libedmnativehelper.so \
@@ -241,26 +239,59 @@ ELITELTE_SENSOR_VENDOR_LIBS := \
     $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/libsensor_reg.so) \
     $(wildcard $(ELITELTE_VENDOR_PATH)/vendor/lib/sensor_calibrate.so)
 
+ELITELTE_MEDIA_CONFIGS := \
+    $(ELITELTE_VENDOR_PATH)/etc/media_codecs.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/media_codecs_8956.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/media_codecs_google_audio.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/media_codecs_google_telephony.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/media_codecs_google_video.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/media_codecs_performance.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/media_codecs_sec_primary.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/media_codecs_sec_secondary.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/media_profiles.xml \
+    $(ELITELTE_VENDOR_PATH)/etc/media_profiles_8956.xml
+
+ELITELTE_MEDIA_LIBS := \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libI420colorconvert.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxAacDec.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxAacEnc.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxAlacDec.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxAlacDecSw.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxAmrEnc.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxAmrwbplusDec.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxApeDec.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxApeDecSw.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxCore.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxEvrcDec.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxEvrcEnc.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxQcelp13Dec.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxQcelp13Enc.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxSwVdec.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxSwVencMpeg4.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxVdec.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxVenc.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxVideoDSMode.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxVpp.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxWmaDec.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libc2dcolorconvert.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libmm-color-convertor.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libmm-omxcore.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libmmosal.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libmmparser.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libmmparser_lite.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libqomx_core.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libqomx_jpegdec.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libqomx_jpegenc.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libqomx_jpegenc_pipe.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libstagefrighthw.so
+
 PRODUCT_COPY_FILES += \
     $(foreach f,$(ELITELTE_CAMERA_CONFIGS),$(f):system/etc/camera/$(notdir $(f))) \
     $(foreach f,$(ELITELTE_CAMERA_CONFIGS),$(f):$(TARGET_COPY_OUT_VENDOR)/etc/camera/$(notdir $(f))) \
     $(foreach f,$(ELITELTE_CAMERA_FIRMWARE),$(f):system/etc/firmware/$(notdir $(f))) \
     $(foreach f,$(ELITELTE_CAMERA_SYSTEM_LIBS),$(f):$(TARGET_COPY_OUT_VENDOR)/lib/$(notdir $(f))) \
     $(foreach f,$(ELITELTE_CAMERA_VENDOR_LIBS),$(f):$(TARGET_COPY_OUT_VENDOR)/lib/$(notdir $(f))) \
-    $(foreach f,$(ELITELTE_SENSOR_VENDOR_LIBS),$(f):$(TARGET_COPY_OUT_VENDOR)/lib/$(notdir $(f)))
-
-# Oreo CAF MSM8937 media profiles/codecs. These expose the same 1080p30 H.264
-# hardware encoder class as stock, while matching the LineageOS 15.1 media stack.
-PRODUCT_COPY_FILES += \
-    hardware/qcom/media/msm8998/conf_files/msm8937/media_codecs_8937.xml:system/etc/media_codecs.xml \
-    hardware/qcom/media/msm8998/conf_files/msm8937/media_codecs_performance_8937.xml:system/etc/media_codecs_performance.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    vendor/samsung/elitelte/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    hardware/qcom/media/msm8998/conf_files/msm8937/media_codecs_8937.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
-    hardware/qcom/media/msm8998/conf_files/msm8937/media_codecs_performance_8937.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
-    vendor/samsung/elitelte/configs/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
+    $(foreach f,$(ELITELTE_SENSOR_VENDOR_LIBS),$(f):$(TARGET_COPY_OUT_VENDOR)/lib/$(notdir $(f))) \
+    $(foreach f,$(ELITELTE_MEDIA_CONFIGS),$(f):system/etc/$(notdir $(f))) \
+    $(foreach f,$(ELITELTE_MEDIA_CONFIGS),$(f):$(TARGET_COPY_OUT_VENDOR)/etc/$(notdir $(f))) \
+    $(foreach f,$(ELITELTE_MEDIA_LIBS),$(f):$(TARGET_COPY_OUT_VENDOR)/lib/$(notdir $(f)))

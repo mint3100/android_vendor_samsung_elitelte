@@ -26,8 +26,8 @@ kernel/samsung/msm8917_elitelte
 
 - Target Android version: LineageOS 15.1 / Android 8.1.
 - Vendor install path: `$(TARGET_COPY_OUT_VENDOR)`, currently `system/vendor`.
-- Display HAL modules are built from source in the device tree; Adreno EGL/GLES
-  blobs are kept for hardware rendering.
+- Radio, display, audio, lights, camera, sensors, and media codecs are installed
+  from the stock blob set; the device tree should only select and configure them.
 - Add new blobs only when a boot log or HAL failure proves they are needed.
 
 ## Legal Notice
