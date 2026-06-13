@@ -114,6 +114,7 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     $(ELITELTE_VENDOR_PATH)/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/samsung/elitelte/configs/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    vendor/samsung/elitelte/configs/seccomp_policy/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
     $(ELITELTE_VENDOR_PATH)/lib/hw/camera.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/hw/sensors.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.msm8937.so \
     $(ELITELTE_VENDOR_PATH)/lib/lib_SamsungRec_V04013.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_SamsungRec_V04013.so \
@@ -149,6 +150,8 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbloader.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libacdbmapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbmapper.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libacdbrtac.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbrtac.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libadiertac.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadiertac.so \
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libadm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadm.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudcal.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libbtnv.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbtnv.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libconfigdb.so:$(TARGET_COPY_OUT_VENDOR)/lib/libconfigdb.so \
@@ -240,6 +243,7 @@ ELITELTE_SENSOR_VENDOR_LIBS := \
 
 PRODUCT_COPY_FILES += \
     $(foreach f,$(ELITELTE_CAMERA_CONFIGS),$(f):system/etc/camera/$(notdir $(f))) \
+    $(foreach f,$(ELITELTE_CAMERA_CONFIGS),$(f):$(TARGET_COPY_OUT_VENDOR)/etc/camera/$(notdir $(f))) \
     $(foreach f,$(ELITELTE_CAMERA_FIRMWARE),$(f):system/etc/firmware/$(notdir $(f))) \
     $(foreach f,$(ELITELTE_CAMERA_SYSTEM_LIBS),$(f):$(TARGET_COPY_OUT_VENDOR)/lib/$(notdir $(f))) \
     $(foreach f,$(ELITELTE_CAMERA_VENDOR_LIBS),$(f):$(TARGET_COPY_OUT_VENDOR)/lib/$(notdir $(f))) \
