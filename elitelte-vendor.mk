@@ -117,6 +117,7 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/lib/lib_SamsungRec_V04013.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_SamsungRec_V04013.so \
     $(ELITELTE_VENDOR_PATH)/lib/lib_Samsung_AudioZoom_v102.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_Samsung_AudioZoom_v102.so \
     $(ELITELTE_VENDOR_PATH)/lib/lib_DNSe_NRSS_ver226.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_DNSe_NRSS_ver226.so \
+    $(ELITELTE_VENDOR_PATH)/lib/libSoundAlive_VSP_ver315b_arm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSoundAlive_VSP_ver315b_arm.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcess.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPostProcessConvertor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPostProcessConvertor.so \
     $(ELITELTE_VENDOR_PATH)/lib/libSamsungPreProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSamsungPreProcess.so \
@@ -135,6 +136,9 @@ PRODUCT_COPY_FILES += \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungRecord.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungRecord.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungRecord_ns.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungRecord_ns.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungRecord_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungRecord_zoom.so \
+    $(ELITELTE_VENDOR_PATH)/lib/lib_SoundAlive_3DPosition_ver201.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_SoundAlive_3DPosition_ver201.so \
+    $(ELITELTE_VENDOR_PATH)/lib/lib_SoundAlive_SRC192_ver205.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_SoundAlive_SRC192_ver205.so \
+    $(ELITELTE_VENDOR_PATH)/lib/lib_SoundAlive_play_plus_ver127a.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_SoundAlive_play_plus_ver127a.so \
     $(ELITELTE_VENDOR_PATH)/lib/lib_SoundBooster_ver700.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_SoundBooster_ver700.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungeffect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungeffect.so \
     $(ELITELTE_VENDOR_PATH)/lib/libsamsungSoundbooster_plus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsamsungSoundbooster_plus.so \
