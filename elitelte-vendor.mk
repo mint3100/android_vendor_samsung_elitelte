@@ -258,36 +258,26 @@ ELITELTE_MEDIA_CONFIGS := \
 ELITELTE_MEDIA_LIBS := \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libI420colorconvert.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxAacDec.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxAacEnc.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxAlacDec.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxAlacDecSw.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxAmrEnc.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxAmrwbplusDec.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxApeDec.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxApeDecSw.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxCore.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxEvrcDec.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxEvrcEnc.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxQcelp13Dec.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxQcelp13Enc.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxSwVdec.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxSwVencMpeg4.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxVdec.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxVenc.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxVideoDSMode.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxVpp.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libOmxWmaDec.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libc2dcolorconvert.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libmm-color-convertor.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libmm-omxcore.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libmmosal.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libmmparser.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libmmparser_lite.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libqomx_core.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libqomx_jpegdec.so \
     $(ELITELTE_VENDOR_PATH)/vendor/lib/libqomx_jpegenc.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libqomx_jpegenc_pipe.so \
-    $(ELITELTE_VENDOR_PATH)/vendor/lib/libstagefrighthw.so
+    $(ELITELTE_VENDOR_PATH)/vendor/lib/libqomx_jpegenc_pipe.so
 
 PRODUCT_COPY_FILES += \
     $(foreach f,$(ELITELTE_CAMERA_CONFIGS),$(f):system/etc/camera/$(notdir $(f))) \
